@@ -119,8 +119,7 @@ class UploadImage extends Component {
         });
     } catch (err) {
       console.log(err);
-      if (err.response.status === 500) {
-        console.log(err.response);
+      if (err) {
         this.setState({
           message: "Internal server error occured",
           imagePreview: "",
